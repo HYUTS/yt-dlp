@@ -1,6 +1,27 @@
 <!-- MANPAGE: BEGIN EXCLUDED SECTION -->
 <div align="center">
 
+// Generates small description file
+yt-dlp --ignore-errors --write-description --embed-metadata  --format bestaudio --extract-audio --audio-format mp3 --audio-quality 160K -o "thumbnail:%(title)s\%(title)s.%(ext)s" --no-playlist "https://www.youtube.com/watch?v=hBhxtyrhFu8"
+
+yt-dlp --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --audio-quality 160K --output "%(title)s.%(ext)s" --no-playlist "https://www.youtube.com/watch?v=kHJAi6kdBVM&ab_channel=HAARPER"
+
+yt-dlp --ignore-errors --write-description --embed-metadata  --format bestaudio --extract-audio --audio-format mp3 --audio-quality 160K --output "%(title)s.%(ext)s" --no-playlist "https://www.youtube.com/watch?v=kHJAi6kdBVM&ab_channel=HAARPER"
+
+yt-dlp -x --audio-format m4a https://www.youtube.com/watch?v=MLz5gQ_PBFw
+
+--Copies only name of items in selected dir
+dir /w input > INPUT.json
+
+https://write.corbpie.com/searching-youtube-videos-with-yt-dlp/
+// No download just display
+yt-dlp ytsearch10:HAARPER --get-id --get-title
+// Download
+yt-dlp -f 'bv*+ba' ytsearch2:HAARPER
+
+https://write.corbpie.com/download-a-youtube-video-comments-with-yt-dlp/
+yt-dlp --write-comments https://www.youtube.com/watch?v=L5dhhwUDKXg
+
 [![YT-DLP](https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg)](#readme)
 
 [![Release version](https://img.shields.io/github/v/release/yt-dlp/yt-dlp?color=brightgreen&label=Download&style=for-the-badge)](#release-files "Release")
